@@ -6,17 +6,28 @@ import java.io.IOException;
 
 public class TypeConversion_Ex_4 {
     public static void main(String[] args) throws IOException {
+//        int a = 0;
+//        int b = 2;
+//        int c = 5;
+
+//        int a1 = a;
+//        int b1 = b;
+//        int c1 = c;
+//
+//        a = a1 + b1;
+//        b = c1 - a1;
+//        c = a1 + b1 + c1;
+
         int a = 0;
         int b = 2;
         int c = 5;
 
-        int a1 = a;
         int b1 = b;
         int c1 = c;
 
-        a = a1 + b1;
-        b = c1 - a1;
-        c = a1 + b1 + c1;
+        a = b1 + a;
+        b = c1 - a + b1;
+        c = b1 + c1;
 
         System.out.println("a=" + a);
         System.out.println("b=" + b);
