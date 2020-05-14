@@ -12,6 +12,14 @@ public class Cat {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void sleep() throws InterruptedException {
         System.out.print("Sleeping zz-z-z-z...\n");
         Thread.sleep(3000);
