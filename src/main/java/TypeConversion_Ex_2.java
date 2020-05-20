@@ -12,7 +12,7 @@ public class TypeConversion_Ex_2 {
         int q = Integer.parseInt(bufferedReader.readLine());
 
         int firstNumber= q/10;
-        int lastNumber = q - 10*firstNumber;
+        int lastNumber = q % 10;
         int numbersSum = firstNumber + lastNumber;
         System.out.println("Сумма цифр числа равна ");
         System.out.print(numbersSum);
