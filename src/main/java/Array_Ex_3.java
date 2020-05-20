@@ -15,12 +15,11 @@ public class Array_Ex_3 {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String[] list = new String[10];
-        int [] len = new int[10];
+        int[] len = new int[10];
 
         // Заполняем массив текстом с клавиатуры
         System.out.println("Введите 10 текстовых элементов массива");
         for (int i = 0; i < 10; i++) {
-
             list[i] = reader.readLine();
         }
         // Заполняем и сразу выводим числовой массив
@@ -29,6 +28,5 @@ public class Array_Ex_3 {
             len[i] = list[i].length();
             System.out.println(len[i]);
         }
-
     }
 }
