@@ -15,8 +15,8 @@ public class TypeConversion_Ex_1 {
 
         System.out.println("Введите число w");
         int w = Integer.parseInt(bufferedReader.readLine());
-        int res = q/w;
-        int ostatok = q-res*w;
+        int res = q / w;
+        int ostatok = q % w;
 
         System.out.print("Результат деления q/w=");
         System.out.print(res);
