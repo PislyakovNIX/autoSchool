@@ -1,4 +1,5 @@
-package ReferenceTypes_2x4;//         Дана строка. Вывести первый, последний и средний (если он есть) символы.
+package ReferenceTypes_2x4;
+//         Дана строка. Вывести первый, последний и средний (если он есть) символы.
 //        Напишите программу, которая выводит часть строки до первой встреченной точки, включая точку. Также предусмотрите вывод количества пробелов.
 
 import java.io.*;
@@ -14,24 +15,27 @@ public class ReferenceTypes_Ex_1 {
         String text = bufferedReader.readLine();
 
         // Выводим первый символ
-        String firstCharachter = text.substring(0,1);
+        String firstCharachter = String.valueOf(text.charAt(0));
         System.out.println("Первый символ " + firstCharachter);
 
         // Выводим средний символ. В случае с нечетным количеством символов это будет примерно средний
-        String middleCharachter = text.substring(text.length()/2,(text.length()/2)+1);
-        System.out.println("Средний символ " + middleCharachter);
+        if (text.length() % 2 != 0) {
+            String middleCharachter = String.valueOf(text.charAt(text.length() / 2));
+            System.out.println("Средний символ " + middleCharachter);
+        }
 
         // Выводим последний символ
-        String lastCharachter = text.substring(text.length()-1,text.length());
+        String lastCharachter = String.valueOf(text.charAt(text.length() - 1));
         System.out.println("Последний символ " + lastCharachter);
 
         // Выводит часть строки до первой встреченной точки, включая точку
         int firstDotPosition = text.indexOf(".");
-        System.out.println("Часть строки до первой встреченной точки, включая точку - " + text.substring(0, firstDotPosition+1));
+        if (firstDotPosition != -1) {
+            System.out.println("Часть строки до первой встреченной точки, включая точку - " + text.substring(0, firstDotPosition + 1));
+        }
 
         // Вывод количества пробелов
         int spacesAmount = text.length() - text.replaceAll(" ", "").length();
         System.out.println("Количество пробелов: " + spacesAmount);
-
     }
 }
