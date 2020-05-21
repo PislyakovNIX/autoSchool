@@ -18,7 +18,7 @@ public class ReferenceTypes_Ex_1 {
         String firstCharachter = String.valueOf(text.charAt(0));
         System.out.println("Первый символ " + firstCharachter);
 
-        // Выводим средний символ. В случае с нечетным количеством символов это будет примерно средний
+        // Выводим средний символ если он имеется
         if (text.length() % 2 != 0) {
             String middleCharachter = String.valueOf(text.charAt(text.length() / 2));
             System.out.println("Средний символ " + middleCharachter);
@@ -28,7 +28,7 @@ public class ReferenceTypes_Ex_1 {
         String lastCharachter = String.valueOf(text.charAt(text.length() - 1));
         System.out.println("Последний символ " + lastCharachter);
 
-        // Выводит часть строки до первой встреченной точки, включая точку
+        // Выводит часть строки до первой встреченной точки, включая точку (если есть точка)
         int firstDotPosition = text.indexOf(".");
         if (firstDotPosition != -1) {
             System.out.println("Часть строки до первой встреченной точки, включая точку - " + text.substring(0, firstDotPosition + 1));
