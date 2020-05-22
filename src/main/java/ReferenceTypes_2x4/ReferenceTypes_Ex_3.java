@@ -13,11 +13,10 @@ public class ReferenceTypes_Ex_3 {
 
         System.out.println("Введите несколько слов разделяя их пробелами. Система определит максимальное из них");
         String text = bufferedReader.readLine();
-        String[] list = new ArrayList<String>().toArray(new String[0]);
-        list = text.split(" ");
-        int max = list[1].length();
+        String[] list = text.split(" ");
+        int max = list[0].length();
         int index = 0;
-        for (int i = 0; i < list.length; i++) {
+        for (int i = 1; i < list.length; i++) {
             if (list[i].length() > max) {
                 max = list[i].length();
                 index = i;
