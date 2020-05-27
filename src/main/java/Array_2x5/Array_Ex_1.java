@@ -18,26 +18,24 @@ public class Array_Ex_1 {
         int[] listt = new int[20];
         // Заполняем массив с клавиатуры
         System.out.println("Введите 20 элементов массива");
-        for (int i = 0; i < 20; i++)
-        {
-
+        for (int i = 0; i < 20; i++) {
             listt[i] = Integer.parseInt(reader.readLine());
         }
         return listt;
     }
+
     int max(int[] array) {
         int maxElement = array[0];
-        for (int i = 1; i < array.length; i++)
-        {
+        for (int i = 1; i < array.length; i++) {
             if (array[i] > maxElement)
                 maxElement = array[i];
-
         }
         return maxElement;
     }
+
     public static void main(String[] args) throws IOException {
         Array_Ex_1 exerciseOne = new Array_Ex_1();
         System.out.println("Максимальное число в массиве " + exerciseOne.max(exerciseOne.initializeArray()));
     }
 
-    }
+}

@@ -22,15 +22,12 @@ public class ConditionalStatements_Ex_10 {
         System.out.println("Введите строку");
         String text = bufferedReader.readLine();
         System.out.println("Введите количество выводов N");
-        int N = Integer.parseInt(bufferedReader.readLine());
+        int outputAmount = Integer.parseInt(bufferedReader.readLine());
 
         int i = 1;
-        while (i <= N) {
-
+        while (i <= outputAmount) {
             System.out.println(text);
-
             i++; //увеличение i на 1
-
         }
     }
 }

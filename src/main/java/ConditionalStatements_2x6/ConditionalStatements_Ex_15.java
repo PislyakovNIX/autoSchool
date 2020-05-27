@@ -9,10 +9,7 @@ import java.io.*;
 //        888
 
 public class ConditionalStatements_Ex_15 {
-    public static void main(String[] args) throws IOException {
-        InputStream inputStream = System.in;
-        Reader inputStreamReader = new InputStreamReader(inputStream);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+    public static void main(String[] args) {
 
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= i; j++) {
@@ -21,7 +18,6 @@ public class ConditionalStatements_Ex_15 {
             System.out.println(" ");
         }
     }
-
 }
 
 

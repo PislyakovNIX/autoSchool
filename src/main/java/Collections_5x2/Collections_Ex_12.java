@@ -32,6 +32,5 @@ public class Collections_Ex_12 {
         listSet.add("лапать");
         listSet.add("ласать");
         listSet.add("ласкаться");
-
     }
 }

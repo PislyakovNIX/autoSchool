@@ -29,7 +29,7 @@ public class ConditionalStatements_Ex_7 {
             if (guess < secret) System.out.println("Мало!");
             if (guess == secret) {
                 System.out.println("Угадал! Поздравляю!");
-                i = 9;
+                break;
             }
             if (i == 7) System.out.println("Не угадал :(");
 

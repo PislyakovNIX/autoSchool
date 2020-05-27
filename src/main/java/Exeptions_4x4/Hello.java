@@ -11,6 +11,5 @@ public class Hello {
         ourcat.sleep();
         String say = ourcat.speak("Play with me");
         System.out.println(say);
-
     }
 }

@@ -8,10 +8,7 @@ import java.io.*;
 
 public class ConditionalStatements_Ex_16 {
 
-    public static void main(String[] args) throws IOException {
-        InputStream inputStream = System.in;
-        Reader inputStreamReader = new InputStreamReader(inputStream);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+    public static void main(String[] args) {
 
         for (int i = 1; i <= 10; i++) {
             System.out.print("8");

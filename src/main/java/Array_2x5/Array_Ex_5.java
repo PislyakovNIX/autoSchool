@@ -25,18 +25,15 @@ public class Array_Ex_5 {
         // Заполняем массив с клавиатуры
         System.out.println("Введите 20 целочисленных элементов массива");
         for (int i = 0; i < 20; i++) {
-
             listt[i] = Integer.parseInt(reader.readLine());
+        }
 
-        }
         // Заполняем первый массив lis_1 половиной значений из исходного массива
-        for (int i = 0; i < 10; i++) {
-            lis_1[i] = listt[i];
-        }
+        System.arraycopy(listt, 0, lis_1, 0, 10);
+
         // Заполняем второй массив lis_2 второй половиной значений из исходного массива
-        for (int i = 0; i < 10; i++) {
-            lis_2[i] = listt[10+i];
-        }
+        System.arraycopy(listt, 10, lis_2, 0, 10);
+
         // Выводим второй массив lis_2
         System.out.println("Выводим второй массив");
         for (int i = 0; i < 10; i++) {

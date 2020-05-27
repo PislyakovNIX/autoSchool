@@ -16,18 +16,11 @@ public class ConditionalStatements_Ex_12 {
         while (i <= 10) {
             int j = 1;
             while (j <= 10) {
-
-                System.out.print(i * j);
-                System.out.print(" ");
-
+                System.out.print(i * j + " ");
                 j++; //увеличение j на 1
             }
             System.out.println(" ");
-
             i++; //увеличение i на 1
-
         }
-
-
     }
 }

@@ -16,7 +16,6 @@ public class Collections_Ex_2 {
 
         Map<String, String> map = new HashMap<String, String>();
 
-
         map.put("арбуз", "ягода");
         map.put("банан", "трава");
         map.put("вишня", "ягода");
