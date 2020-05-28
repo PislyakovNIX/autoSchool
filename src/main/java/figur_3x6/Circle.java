@@ -4,8 +4,24 @@ public class Circle extends GeometryFig {
     private int diameter;
     private float area;
 
+    @Override
     public void setDiameter(int diameter) {
         this.diameter = diameter;
+    }
+
+    @Override
+    public void setSquareSide(int i) {
+
+    }
+
+    @Override
+    public void setBase(int i) {
+
+    }
+
+    @Override
+    public void setHeight(int i) {
+
     }
 
     private float countArea() {
@@ -13,6 +29,7 @@ public class Circle extends GeometryFig {
         return area;
     }
 
+    @Override
     public float getArea() {
         area = countArea();
         return area;

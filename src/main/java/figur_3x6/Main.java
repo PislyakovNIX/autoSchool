@@ -9,68 +9,55 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        GeometryFig[] figureList = new GeometryFig[10]; // Это массив фигур
+        Random rnd = new Random();
 
-        String[] namesList = new String[10]; // Это массив имен
-        float[] areaList = new float[10]; // Это массив площадей фигур
-
+        System.out.println("Создаем фигуры:");
         for (int i = 0; i < 10; i++) {
             // Генерируем случайное число 0, 1 или 2 для случайного заполнения массива
             Random random = new Random();
             int rand = random.nextInt(2 + 1);
-            //Генерируем случайную фигуру
+
+            //Генерируем случайную фигуру и добавляем ее в массив
             switch (rand) {
-                //case 0: Circle circle = new Circle();
                 case 0:
-                    Circle circle = new Circle();
-                    circle.setName("Круг №" + i);
-                    namesList[i] = circle.getName();
-                    System.out.println("Создается фигура с именем " + circle.getName() + " введите ее диаметр");
-                    circle.setDiameter(Integer.parseInt(reader.readLine()));
-                    System.out.println("Площадь круга = " + circle.getArea());
-                    areaList[i] = circle.getArea();
+                    figureList[i] = new Circle();
+                    figureList[i].setName("Круг №" + i);
+                    figureList[i].setDiameter(rnd.nextInt(9) + 1);
+                    System.out.println(figureList[i].getName() + " S=" + figureList[i].getArea());
                     break;
                 case 1:
-                    Square square = new Square();
-                    square.setName("Квадрат №" + i);
-                    namesList[i] = square.getName();
-                    System.out.println("Создается фигура с именем " + square.getName() + " введите ее сторону");
-                    square.setSquareSide(Integer.parseInt(reader.readLine()));
-                    System.out.println("Площадь квадрата = " + square.getArea());
-                    areaList[i] = square.getArea();
+                    figureList[i] = new Square();
+                    figureList[i].setName("Квадрат №" + i);
+                    figureList[i].setSquareSide(rnd.nextInt(9) + 1);
+                    System.out.println(figureList[i].getName() + " S=" + figureList[i].getArea());
                     break;
                 case 2:
-                    Triangle triangle = new Triangle();
-                    triangle.setName("Треугольник №" + i);
-                    namesList[i] = triangle.getName();
-                    System.out.println("Создается фигура с именем " + triangle.getName() + " введите ее высоту и основание");
-                    triangle.setBase(Integer.parseInt(reader.readLine()));
-                    triangle.setHeight(Integer.parseInt(reader.readLine()));
-                    System.out.println("Площадь треугольника = " + triangle.getArea());
-                    areaList[i] = triangle.getArea();
+                    figureList[i] = new Triangle();
+                    figureList[i].setName("Треугольник №" + i);
+                    figureList[i].setBase(rnd.nextInt(9) + 1);
+                    figureList[i].setHeight(rnd.nextInt(9) + 1);
+                    System.out.println(figureList[i].getName() + " S=" + figureList[i].getArea());
                     break;
             }
         }
-        // Упорядочиваем оба массива в зависимости от площади фигуры
+
+        // Упорядочиваем массив в зависимости от площади фигуры
         for (int i = 9; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                if (areaList[j] > areaList[j + 1]) {
-                    float tmp = areaList[j];
-                    areaList[j] = areaList[j + 1];
-                    areaList[j + 1] = tmp;
-
-                    String tmpName = namesList[j];
-                    namesList[j] = namesList[j + 1];
-                    namesList[j + 1] = tmpName;
-
+                if (figureList[j].getArea() > figureList[j + 1].getArea()) {
+                    GeometryFig tmp = figureList[j];
+                    figureList[j] = figureList[j + 1];
+                    figureList[j + 1] = tmp;
                 }
             }
         }
+
         // Выводим результатирующий массив
         System.out.println();
         System.out.println("Выводим отсортированный массив");
         for (int i = 0; i < 10; i++) {
-            System.out.println(namesList[i] + ", S=" + areaList[i]);
-
+            System.out.println(figureList[i].getName() + ", S=" + figureList[i].getArea());
         }
     }
 }
