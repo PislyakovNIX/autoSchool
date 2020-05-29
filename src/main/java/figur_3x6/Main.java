@@ -7,8 +7,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        
         GeometryFig[] figureList = new GeometryFig[10]; // Это массив фигур
         Random rnd = new Random();
 
