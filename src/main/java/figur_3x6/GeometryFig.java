@@ -15,13 +15,13 @@ public abstract class GeometryFig {
 
     public abstract float getArea();
 
-    public abstract void setDiameter(int i);
+//    public abstract void setDiameter(int i);
 
-    public abstract void setSquareSide(int i);
+//    public abstract void setSquareSide(int i);
 
-    public abstract void setBase(int i);
+//    public abstract void setBase(int i);
 
-    public abstract void setHeight(int i);
+//    public abstract void setHeight(int i);
 
     public int getX() {
         return x;

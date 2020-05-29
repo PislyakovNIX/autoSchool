@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         GeometryFig[] figureList = new GeometryFig[10]; // Это массив фигур
@@ -21,22 +21,25 @@ public class Main {
             //Генерируем случайную фигуру и добавляем ее в массив
             switch (rand) {
                 case 0:
-                    figureList[i] = new Circle();
-                    figureList[i].setName("Круг №" + i);
-                    figureList[i].setDiameter(rnd.nextInt(9) + 1);
+                    Circle circle = new Circle();
+                    circle.setName("Круг №" + i);
+                    circle.setDiameter(rnd.nextInt(9) + 1);
+                    figureList[i] = circle;
                     System.out.println(figureList[i].getName() + " S=" + figureList[i].getArea());
                     break;
                 case 1:
-                    figureList[i] = new Square();
-                    figureList[i].setName("Квадрат №" + i);
-                    figureList[i].setSquareSide(rnd.nextInt(9) + 1);
+                    Square square = new Square();
+                    square.setName("Квадрат №" + i);
+                    square.setSquareSide(rnd.nextInt(9) + 1);
+                    figureList[i] = square;
                     System.out.println(figureList[i].getName() + " S=" + figureList[i].getArea());
                     break;
                 case 2:
-                    figureList[i] = new Triangle();
-                    figureList[i].setName("Треугольник №" + i);
-                    figureList[i].setBase(rnd.nextInt(9) + 1);
-                    figureList[i].setHeight(rnd.nextInt(9) + 1);
+                    Triangle triangle = new Triangle();
+                    triangle.setName("Треугольник №" + i);
+                    triangle.setBase(rnd.nextInt(9) + 1);
+                    triangle.setHeight(rnd.nextInt(9) + 1);
+                    figureList[i] = triangle;
                     System.out.println(figureList[i].getName() + " S=" + figureList[i].getArea());
                     break;
             }
