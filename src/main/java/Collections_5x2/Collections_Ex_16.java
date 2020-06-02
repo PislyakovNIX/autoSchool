@@ -22,31 +22,26 @@ public class Collections_Ex_16 {
         nameSurnameList.put("Асташин", "Егор");
 
         // Создадим мапу, по которой будем удалять людей из списка. Ключ - Фамилия, значение - кол-во совпадений имени для этой фамилии
-        Map<String, Integer> removeList = new HashMap<String, Integer>();
+        Set<String> removeListSet = new HashSet<>();
 
         // Формируем removeList
         Iterator<Map.Entry<String, String>> iterator_i = nameSurnameList.entrySet().iterator();
         while (iterator_i.hasNext()) {
             Map.Entry<String, String> i = iterator_i.next();
-            String search = i.getValue();
+            String searchName = i.getValue();
+            String searchSurname = i.getKey();
             Iterator<Map.Entry<String, String>> iterator_j = nameSurnameList.entrySet().iterator();
-            int count = 0;
             while (iterator_j.hasNext()) {
                 Map.Entry<String, String> j = iterator_j.next();
-                if (j.getValue().equals(search)) {
-                    count++;
+                if (j.getValue().equals(searchName) & !j.getKey().equals(searchSurname)) {
+                    removeListSet.add(j.getKey());
                 }
-                removeList.put(i.getKey(), count);
             }
         }
-
         // Удаляем из списка людей с одинаковыми именами
-        for (Map.Entry<String, Integer> pair : removeList.entrySet()) {
-            if (pair.getValue() > 1) {
-                nameSurnameList.remove(pair.getKey());
-            }
+        for (String text : removeListSet) {
+            nameSurnameList.remove(text);
         }
-
         // Выводим итоговую мапу
         System.out.println();
         System.out.println("Выводим итоговую мапу");

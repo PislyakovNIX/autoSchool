@@ -35,7 +35,7 @@ public class Collections_Ex_13 {
         // Удаляем элементы, которые больше 20
         Iterator<Integer> iterator = numbersList.iterator();
         while (iterator.hasNext()) {
-            if (iterator.next() > 20) iterator.remove();
+            if (iterator.next() > 10) iterator.remove();
         }
 
         // Выводиим итоговое множество

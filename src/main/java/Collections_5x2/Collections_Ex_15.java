@@ -28,7 +28,7 @@ public class Collections_Ex_15 {
         Iterator<Map.Entry<String, LocalDate>> iterator = birthMap.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, LocalDate> pair = iterator.next();
-            if (pair.getValue().getMonthValue() == 6 || pair.getValue().getMonthValue() == 7 || pair.getValue().getMonthValue() == 8)
+            if (pair.getValue().getMonthValue() >= 6 & pair.getValue().getMonthValue() <= 8)
                 iterator.remove();
         }
 

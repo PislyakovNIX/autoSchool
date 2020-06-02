@@ -22,10 +22,10 @@ public class Cat {
         this.name = name;
     }
 
-    public void sleep() throws InterruptedException {
-        System.out.print("Sleeping zz-z-z-z...\n");
-        Thread.sleep(3000);
-    }
+//    public void sleep() throws InterruptedException {
+//        System.out.print("Sleeping zz-z-z-z...\n");
+//        Thread.sleep(3000);
+//    }
 
     public String speak(String words) {
         try {
