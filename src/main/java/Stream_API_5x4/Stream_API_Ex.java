@@ -2,10 +2,7 @@ package Stream_API_5x4;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Random;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 //Создайте список List<String> не короче 50 элементов разной длинны (наполнение не важно).
 //        Добавьте вручную несколько пустых элементов ""
@@ -28,23 +25,16 @@ public class Stream_API_Ex {
         list.add("");
         list.add("");
 
-        // Создаем стрим из коллекции
-        Stream<String> streamFromCollection_1 = list.stream();
-
         // Выводим длинну каждого из элементов списка
         System.out.println(" Выводим длинну каждого из элементов списка");
-        streamFromCollection_1.forEach(s -> System.out.println(s.length() + ":" + s));
+        list.stream().forEach(text -> System.out.println(text.length() + ":" + text));
 
         // Выводим не пустые элементы списка не содержащие символ d
-        Stream<String> streamFromCollection_2 = list.stream();
-        System.out.println();
-        System.out.println("Выводим не пустые элементы списка не содержащие символ d");
-        streamFromCollection_2.filter(Objects::nonNull).filter(s -> !s.contains("d")).forEach(System.out::println);
+        System.out.println("\n" + "Выводим не пустые элементы списка не содержащие символ d");
+        list.stream().filter(text -> !text.isEmpty() && !text.contains("d")).forEach(System.out::println);
 
         // Элементы списка в алфавитном порядке
-        Stream<String> streamFromCollection_3 = list.stream();
-        System.out.println();
-        System.out.println("Выводим элементы списка в алфавитном порядке");
-        streamFromCollection_3.sorted().collect(Collectors.toList()).forEach(s -> System.out.println(s));
+        System.out.println("\n" + "Выводим элементы списка в алфавитном порядке");
+        list.stream().sorted().forEach(text -> System.out.println(text));
     }
 }
