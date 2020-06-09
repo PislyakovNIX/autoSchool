@@ -30,11 +30,11 @@ public class Stream_API_Ex {
         list.stream().forEach(text -> System.out.println(text.length() + ":" + text));
 
         // Выводим не пустые элементы списка не содержащие символ d
-        System.out.println("\n" + "Выводим не пустые элементы списка не содержащие символ d");
+        System.out.println("\nВыводим не пустые элементы списка не содержащие символ d");
         list.stream().filter(text -> !text.isEmpty() && !text.contains("d")).forEach(System.out::println);
 
         // Элементы списка в алфавитном порядке
-        System.out.println("\n" + "Выводим элементы списка в алфавитном порядке");
+        System.out.println("\nВыводим элементы списка в алфавитном порядке");
         list.stream().sorted().forEach(text -> System.out.println(text));
     }
 }
